@@ -1,36 +1,15 @@
-<!DOCTYPE html>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/investigator/InvestigatorMaster.master" AutoEventWireup="true" CodeFile="CrimeInvestigator.aspx.cs" Inherits="investigator_CrimeInvestigator" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Småstads kommun</title>
-		<link rel="stylesheet" href="../stylesheet/style.css" />
-	</head>
-
-	<body>
-		<div id="wrapper">
-			<header id="logo">
-				<h1>Småstad</h1>
-				<p>Kommunen där vi bryr oss om varandra</p>
-			</header><!-- End header -->
-
-
-			<nav>
-				<ul>
-					<li><a class="reports" href="startCoordinator.html">Start(Ärenden)</a></li>
-					<li><a class="reportAdd" href="reportCrime.html">Rapportera brott</a></li>
-					<li class="right"><a class="logout" href="../Default.aspx">Logga ut</a></li>
-				</ul>
-			</nav><!-- End Nav -->
-
-			<div id="content">
+<asp:Content ID="Content2" ContentPlaceHolderID="InvestigatorMaster" Runat="Server">
+    			<div id="content">
 				<h2>Detaljer för ärende: 2014-45-0201</h2>
-				<p class="info">Du är inloggad som samordnare</p>
-
+				<p class="info">Du är inloggad som handläggare</p>
+				
+				<!--Nedan ser man en lista på ärenden-->
 				<section id="leftColumn">
 					<h3>Anmälan</h3>
 					<p>
-						<span class="label">Typ av brott: </span><br />
+						<span class="label">Typ av brott:</span><br />
 						Nedskräpning
 					</p>
 					<p>
@@ -59,7 +38,7 @@
 					<h3>Utredning</h3>
 					<p>
 						<span class="label">Status:</span><br />
-						Pågående 
+						Pågående
 					</p>
 					<p>
 						<span class="label">Ansvarig avdelning: </span><br />
@@ -86,27 +65,34 @@
 						<img src="../images/imagetest.jpg" alt="klicka på bilden" />
 					</p>
 				</section>
-
+				
 				<section id="bottomColumn">
 					<h3>Redigera ärende</h3>
-					<p>Ange enhet: 
-						<select name="department">
-							<option selected="selected">Välj</option>
-							<option value="unit0">Småstads Kommun</option>
-							<option value="unit1">Tekniska Avloppshantering</option>
-							<option value="unit2">Klimat och Energi</option>
-							<option value="unit3">Miljö och Hälsoskydd</option>
-							<option value="unit4">Natur och Skogsvård</option>
-						<option value="unit5">Renhållning och Avfall</option>
-						</select>
+					<p class="label">Händelser:</p>
+					<textarea name="events" rows="5" cols="60"></textarea>
+					
+					<p class="label">Mer information:</p>
+					<textarea name="information" rows="5" cols="60"></textarea>
+					
+					<p class="label">Prover:</p>
+					<input type="file" name="loadImage" />
+					
+					<p class="label">Ladda upp bilder:</p>
+					<input type="file" name="loadImage" />
+					
+					<p class="label">Ändring av status:</p>
+					<select name="status">
+						<option selected="selected">Välj</option>
+						<option value="stat1">Inrapporterad</option>
+						<option value="stat2">Ingen Åtgärd</option>
+						<option value="stat3">Påbörjad</option>
+						<option value="stat4">Klar</option>
+					</select>
+
+					<p>
+						<input class="button" type="submit" value="Spara ändringarna" />
 					</p>
-					<p><input class="button" type="submit" value="Spara" /></p>
 				</section>
-				
-				<footer>
-					&copy; Småstads Kommun All rights reserved.
-				</footer>
 			</div><!-- End Content -->
-		</div><!-- End Wrapper -->
-	</body>
-</html>
+</asp:Content>
+

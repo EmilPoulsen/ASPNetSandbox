@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">
-	<head>
-	<meta charset="UTF-8"/>
-		<title>Småstads kommun</title>
-		<link rel="stylesheet" href="../stylesheet/style.css" />
-	</head>
-
-	<body>
-		<div id="wrapper">
-			<header id="logo">
-				<h1>Småstad</h1>
-				<p>Kommunen där vi bryr oss om varandra</p>
-			</header><!-- End header -->
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/investigator/InvestigatorMaster.master" AutoEventWireup="true" CodeFile="DefaultInvestigator.aspx.cs" Inherits="investigator_DefaultInvestigator" %>
 
 
-				<nav>
-				<ul>
-					<li><a class="reports" href="startInvestigator.html">Start(Ärenden)</a></li>
-					<li class="right"><a class="logout" href="../Default.aspx">Logga ut</a></li>
-				</ul>
-			</nav><!-- End Nav -->
-
-		<div id="content">
+<asp:Content ID="Content2" ContentPlaceHolderID="InvestigatorMaster" Runat="Server">
+    		<div id="content">
 				<h2>Ärenden</h2>
 				<p class="info">Du är inloggad som handläggare</p>
 
@@ -61,7 +41,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0201</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0201</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Ej startad</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -69,7 +49,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0202</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0202</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Pågående</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -77,7 +57,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0203</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0203</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Ej startad</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -85,7 +65,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0204</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0204</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Ej startad</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -93,7 +73,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0205</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0205</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Pågående</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -101,7 +81,7 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0206</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0206</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Ej startad</td>
 						<td>Tekniska avloppshanteringen</td>
@@ -109,19 +89,13 @@
 					</tr>
 					<tr>
 						<td>2014-05-01</td>
-						<td><a href="crimeInvestigator.html">2014-45-0206</a></td>
+						<td><a href="CrimeInvestigator.aspx">2014-45-0206</a></td>
 						<td>Oljeutsläpp</td>
 						<td>Ej startad</td>
 						<td>Tekniska avloppshanteringen</td>
 						<td>Ingen utredare satt</td>
 					</tr>
 				</table>
-
-
-				<footer>
-					&copy; Småstads Kommun All rights reserved.
-				</footer>
 			</div><!-- End Content -->
-		</div><!-- End Wrapper -->
-	</body>
-</html>
+</asp:Content>
+
