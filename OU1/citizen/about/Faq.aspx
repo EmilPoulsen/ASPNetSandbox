@@ -18,7 +18,7 @@
 					<p><span class="label">Vad gör jag med de dumma frågor jag har?</span><br />
 					Du håller dem för dig själv, vi har inte tid att hantera sådana</p>
 				
-					<p>Fick du inte svar på din fråga? <a href="contact.html">Maila eller ring till oss</a>.</p>
+					<p>Fick du inte svar på din fråga? <a href="Contact.aspx">Maila eller ring till oss</a>.</p>
 				</section><!-- End Left -->
 </asp:Content>
 
