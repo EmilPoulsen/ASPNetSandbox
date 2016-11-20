@@ -124,8 +124,9 @@ public class BackEnd
     /// <returns>The Case List</returns>
     public IEnumerable<Case> GetCaseList()
     {
+        return _CaseList;
         //TODO
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     /// <summary>Method that gets one specific Case</summary>

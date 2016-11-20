@@ -39,6 +39,17 @@
         </tr>
     </table>
 
+    <asp:DataList ID="dataListCrimes" runat="server">
+        <ItemTemplate>
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+            <%# Eval("DateOfObservation") %>
+            <%# Eval("ID") %>
+
+
+            <br />
+        </ItemTemplate>
+    </asp:DataList>
+
     <!--Nedan ser man en lista på ärenden
     <!-- Old table implementation. Will be replaced by backend connection..  
     <table>

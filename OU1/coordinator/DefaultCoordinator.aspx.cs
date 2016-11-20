@@ -9,6 +9,8 @@ public partial class coordinator_DefaultCoordinator : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        BackEnd backEnd = new BackEnd();
+        dataListCrimes.DataSource = backEnd.GetCaseList();
+        dataListCrimes.DataBind();
     }
 }
