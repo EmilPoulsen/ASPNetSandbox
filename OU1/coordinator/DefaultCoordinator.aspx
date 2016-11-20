@@ -39,7 +39,8 @@
         </tr>
     </table>
 
-    <!--Nedan ser man en lista på ärenden-->
+    <!--Nedan ser man en lista på ärenden
+    <!-- Old table implementation 
     <table>
         <tr>
             <th>Ärende anmält</th>
@@ -106,5 +107,6 @@
             <td>Ingen utredare satt</td>
         </tr>
     </table>
+    -->
 </asp:Content>
 
