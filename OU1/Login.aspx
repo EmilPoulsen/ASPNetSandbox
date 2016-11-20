@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PublicUserMaster.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="Main" Runat="Server">
+
 				<section id="mainColumn">
 					<h2>Inloggning för Småstads personal</h2>
 					<p class="info">En säker tjänst från Småstads IT-avdelning</p>

@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PublicUserMaster.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="Main" Runat="Server">
+<asp:Content I="Content1" ContentPlaceHolderID="Main" Runat="Server">
 
     				<section id="mainColumn">
-					<h2>Välkommen att fylla i din anmälan av miljöbrott</h2>
+					<h2>Välkommen att fylla i din anmälan av miljöbrott AAAAA</h2>
 					<p class="info">I Småstad är inga brott för små för att anmälas</p>
 					
 					<p>Fyll i formuläret nedan, alla rutor markerade med stjärna (*) måste fyllas i.</p>
@@ -37,8 +37,7 @@
 							<textarea name="observation" rows="5" cols="16"></textarea>
 						</p>
 						<p>
-							<!--<input class="button" type="submit" value="Skicka in" />-->
-                            <a class="button" type="submit" href="citizen/Validate.aspx">Skicka in</a>
+							<input class="button" type="submit" value="Skicka in" />
 						</p>
 					</form>
 				</section><!-- End Left -->
