@@ -40,7 +40,7 @@
     </table>
 
     <!--Nedan ser man en lista på ärenden
-    <!-- Old table implementation 
+    <!-- Old table implementation. Will be replaced by backend connection
     <table>
         <tr>
             <th>Ärende anmält</th>
