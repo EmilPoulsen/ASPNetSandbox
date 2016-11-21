@@ -2,6 +2,8 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainCoordinator" runat="Server">
+        <h2>Ärenden</h2>
+        <p class="info">Du är inloggad som samordnare</p>
     <table id="managerForm">
         <tr>
             <td class="label">Välj status:</td>
@@ -39,16 +41,19 @@
         </tr>
     </table>
 
-    <asp:DataList ID="dataListCrimes" runat="server">
-        <ItemTemplate>
-            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-            <%# Eval("DateOfObservation") %>
-            <%# Eval("ID") %>
+    <asp:GridView ID="gridViewCrimes" runat="server" AutoGenerateColumns="false" GridLines="None">
+        <Columns>
+            <asp:BoundField  DataField="DateOfObservation" HeaderText="Ärende anmält"/>
+
+            <asp:HyperLinkField DataNavigateUrlFields="ID" HeaderText="Ärendenummer" DataNavigateUrlFormatString="CrimeCoordinator.aspx?ID={0}" DataTextField="ID" />
+            <asp:BoundField DataField="TypeOfCrime" HeaderText="Miljöbrott" />
+            <asp:BoundField DataField="Status" HeaderText="Status" />
+            <asp:BoundField DataField="Department" HeaderText="Avdelning" />
+            <asp:BoundField DataField="Employee" HeaderText="Handläggare" />
+        </Columns>
 
 
-            <br />
-        </ItemTemplate>
-    </asp:DataList>
+    </asp:GridView>
 
     <!--Nedan ser man en lista på ärenden
     <!-- Old table implementation. Will be replaced by backend connection..  

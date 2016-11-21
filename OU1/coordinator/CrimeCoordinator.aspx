@@ -1,11 +1,79 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/coordinator/CoordinatorMaster.master" AutoEventWireup="true" CodeFile="CrimeCoordinator.aspx.cs" Inherits="coordinator_CrimeCoordinator" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainCoordinator" runat="Server">
-    <div id="content">
-        <h2>Detaljer för ärende: 2014-45-0201</h2>
+        <h2>Detaljer för ärende:
+            <asp:Literal ID="literalCaseId" runat="server"></asp:Literal>
+        </h2>
         <p class="info">Du är inloggad som samordnare</p>
+        <asp:FormView ID="formViewSpecificCrime" runat="server">
+            <ItemTemplate>
+                <section id="leftColumn">
+                    <h3>Anmälan</h3>
+                    <p>
+                        <asp:Literal ID="Literal1" runat="server"> <b>Typ Av brott: </b> <br /></asp:Literal>
+                        <%# Eval("TypeOfCrime") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal2" runat="server"><b>Brottsplats:</b> <br /></asp:Literal>
+                        <%# Eval("Place") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal3" runat="server"><b>Brottsdatum: </b> <br /></asp:Literal>
+                        <%# Eval("DateOfObservation") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal4" runat="server"><b>Anmälare: </b> <br /></asp:Literal>
+                        <%# Eval("InformerName") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal5" runat="server"><b>Telefon: </b> <br /></asp:Literal>
+                        <%# Eval("InformerPhone") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal6" runat="server"><b>Observationer:</b> <br /></asp:Literal>
+                        <%# Eval("Observation") %>
+                    </p>
+                </section>
+                <section id="rightColumn">
+                    <h3>Utredning</h3>
+                    <p>
+                        <asp:Literal ID="Literal7" runat="server"> <b>Status: </b> <br /></asp:Literal>
+                        <%# Eval("TypeOfCrime") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal8" runat="server"><b>Ansvarig avdelning:</b> <br /></asp:Literal>
+                        <%# Eval("Department") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal9" runat="server"><b>Handläggare:</b> <br /></asp:Literal>
+                        <%# Eval("Employee") %>
+                    </p>
+                    <p>
+                        <span class="label">Provtagning: </span>
+                        <br />
+                        Provtagning.pdf
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal11" runat="server"><b>Ytterligare information:</b> <br /></asp:Literal>
+                        <%# Eval("Info") %>
+                    </p>
+                    <p>
+                        <asp:Literal ID="Literal12" runat="server"><b>Händelser: </b> <br /></asp:Literal>
+                        <%# Eval("Action") %>
+                    </p>
+                    <p>
+                        <span class="label">Bilder: </span>
+                        <br />
+                        <img src="../images/imagetest.jpg" alt="klicka på bilden" />
+                    </p>
+                </section>
+            </ItemTemplate>
 
-        <section id="leftColumn">
+
+        </asp:FormView>
+
+
+        <%--        <section id="leftColumn">
             <h3>Anmälan</h3>
             <p>
                 <span class="label">Typ av brott: </span>
@@ -74,7 +142,9 @@
                 <br />
                 <img src="../images/imagetest.jpg" alt="klicka på bilden" />
             </p>
-        </section>
+        </section>--%>
+
+
 
         <section id="bottomColumn">
             <h3>Redigera ärende</h3>
@@ -91,7 +161,8 @@
                         </select>
             </p>
             <p>
-                <input class="button" type="submit" value="Spara" /></p>
+                <input class="button" type="submit" value="Spara" />
+            </p>
         </section>
 
 

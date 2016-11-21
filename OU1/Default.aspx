@@ -3,7 +3,7 @@
 <asp:Content I="Content1" ContentPlaceHolderID="Main" Runat="Server">
 
     				<section id="mainColumn">
-					<h2>Välkommen att fylla i din anmälan av miljöbrott AAAAA</h2>
+					<h2>Välkommen att fylla i din anmälan av miljöbrott</h2>
 					<p class="info">I Småstad är inga brott för små för att anmälas</p>
 					
 					<p>Fyll i formuläret nedan, alla rutor markerade med stjärna (*) måste fyllas i.</p>

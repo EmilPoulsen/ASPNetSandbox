@@ -25,19 +25,16 @@
 			</nav><!-- End Nav -->
 
 			<div id="content">
-				<h2>Ärenden</h2>
-				<p class="info">Du är inloggad som samordnare</p>
-
 
         <asp:ContentPlaceHolder id="MainCoordinator" runat="server">
-        
         </asp:ContentPlaceHolder>
 
         <footer>
 		&copy; Småstads Kommun All rights reserved.
 		</footer>
-    </div>
+        </div><!-- End Content -->
+        </div><!-- End Wrapper -->
     </form>
-    		</div><!-- End Wrapper -->
+    		
 </body>
 </html>

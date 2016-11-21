@@ -134,8 +134,13 @@ public class BackEnd
     /// <returns>The specific Case</returns>
     public Case GetCaseByID(string caseID)
     {
-        //TODO
-        throw new NotImplementedException();
+        foreach (Case caseItem in _CaseList)
+        {
+            if (caseID.Equals(caseItem.ID)) {
+                return caseItem;
+            }
+        }
+        return null; //it didn't find it!
     }
 
     /// <summary>Method to return the whole Employee List</summary>

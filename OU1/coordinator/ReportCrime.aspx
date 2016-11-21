@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/coordinator/CoordinatorMaster.master" AutoEventWireup="true" CodeFile="ReportCrime.aspx.cs" Inherits="coordinator_ReportCrime" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainCoordinator" Runat="Server">
-    <div id="content">
     <h2>Rapportera brott</h2>
     <p class="info">Du är inloggad som samordnare</p>
+    
 				
     <p>Fyll i formuläret nedan, alla rutor markerade med stjärna (*) måste fyllas i</p>
     <form method="post" action="Validate.aspx">
@@ -39,6 +39,5 @@
             <a id="A1" class="button" href="Validate.aspx" runat="server">Skicka in</a><br />
 	    </p>
     </form>
-    </div><!-- End Content -->
 </asp:Content>
 
