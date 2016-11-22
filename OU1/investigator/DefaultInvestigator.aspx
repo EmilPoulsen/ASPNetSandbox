@@ -2,10 +2,8 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="InvestigatorMaster" Runat="Server">
-    		<div id="content">
 				<h2>Ärenden</h2>
 				<p class="info">Du är inloggad som handläggare</p>
-
 				<table id="managerForm">
 					<tr>
 						<td class="label">Välj status:</td>
@@ -15,22 +13,32 @@
 					</tr>
 					<tr>
 						<td>
-							<select name="status">
+                            <asp:DropDownList ID="dropDownStatus" runat="server"></asp:DropDownList>
+							<%--<select name="status">
 								<option selected="selected">Välj alla</option>
 								<option value="stat0">Inrapporterad</option>
 								<option value="stat1">Ingen åtgärd</option>
 								<option value="stat2">Påbörjad</option>
 								<option value="stat3">Klar</option>
-							</select>
+							</select>--%>
 						</td>
 						<td><input class="button" type="submit" value="Hämta lista" /></td>
 						<td><input name="casenumber" /></td>
 						<td><input class="button" type="submit" value="Sök" /></td>
 					</tr>
 				</table>						
-
+        <asp:GridView ID="gridViewCrimes" runat="server" AutoGenerateColumns="false" GridLines="None">
+        <Columns>
+            <asp:BoundField  DataField="DateOfObservation" HeaderText="Ärende anmält"/>
+            <asp:HyperLinkField DataNavigateUrlFields="ID" HeaderText="Ärendenummer" DataNavigateUrlFormatString="CrimeInvestigator.aspx?ID={0}" DataTextField="ID" />
+            <asp:BoundField DataField="TypeOfCrime" HeaderText="Miljöbrott" />
+            <asp:BoundField DataField="Status" HeaderText="Status" />
+            <asp:BoundField DataField="Department" HeaderText="Avdelning" />
+            <asp:BoundField DataField="Employee" HeaderText="Handläggare" />
+        </Columns>
+    </asp:GridView>
 				<!--Nedan ser man en lista på ärenden-->
-				<table>
+				<%--<table>
 					<tr>
 						<th>Ärende anmält</th>
 						<th>Ärendenummer</th>
@@ -95,7 +103,7 @@
 						<td>Tekniska avloppshanteringen</td>
 						<td>Ingen utredare satt</td>
 					</tr>
-				</table>
-			</div><!-- End Content -->
+				</table>--%>
+
 </asp:Content>
 

@@ -25,14 +25,14 @@
                 </ul>
             </nav>
             <!-- End Nav -->
-
+            <div id="content">
             <asp:ContentPlaceHolder ID="InvestigatorMaster" runat="server">
             </asp:ContentPlaceHolder>
 
             <footer>
                 &copy; Småstads Kommun All rights reserved.
             </footer>
-
+			</div><!-- End Content -->
 
         </div>
     </form>

@@ -12,5 +12,13 @@ public partial class coordinator_DefaultCoordinator : System.Web.UI.Page
         BackEnd backEnd = new BackEnd();
         gridViewCrimes.DataSource = backEnd.GetCaseList();
         gridViewCrimes.DataBind();
+
+        dropDownStatus.DataSource = backEnd.GetStatusList();
+        dropDownStatus.DataBind();
+        dropDownStatus.Items.Insert(0, new ListItem("Välj alla", "0"));
+
+        dropDownDepartment.DataSource = backEnd.GetDepartmentList();
+        dropDownDepartment.DataBind();
+        dropDownDepartment.Items.Insert(0, new ListItem("Välj alla", "0"));
     }
 }

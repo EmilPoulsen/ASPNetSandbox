@@ -96,7 +96,8 @@ public class BackEnd
         case5.Employee = "Ej tillsatt";
 
         _CaseList.Add(case5);
-
+        this.SortCaseList();
+        _CaseList.Reverse();
         //Skapar en lista med anställda, obs! endast fiktiv lista, tills databasen kopplas in
         _EmployeeList = new List<String>();
         _EmployeeList.Add("Martin Kvist");
@@ -118,6 +119,10 @@ public class BackEnd
         _StatusList.Add("Startad");
         _StatusList.Add("Färdig");
 
+    }
+
+    private void SortCaseList(){
+        _CaseList.Sort((case1, case2) => case1.DateTimeOfObservation.CompareTo(case2.DateTimeOfObservation));
     }
 
     /// <summary>Method to return the whole Case List</summary>
@@ -147,23 +152,21 @@ public class BackEnd
     /// <returns>The Employee List</returns>
     public IEnumerable<String> GetEmployeeList()
     {
-        //TODO
-        throw new NotImplementedException();
+        return _EmployeeList;        
     }
 
     /// <summary>Method to return the whole Department List</summary>
     /// <returns>The Department List</returns>
     public IEnumerable<String> GetDepartmentList()
     {
-        //TODO
-        throw new NotImplementedException();
+        return _DepartmentList;
+     
     }
 
     /// <summary>Method to return the whole Status List</summary>
     /// <returns>The Status List</returns>
     public IEnumerable<String> GetStatusList()
     {
-        //TODO
-        throw new NotImplementedException();
+        return _StatusList;
     }
 }

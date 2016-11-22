@@ -12,7 +12,7 @@ public partial class coordinator_CrimeCoordinator : System.Web.UI.Page
         String s = Request.QueryString["ID"];
 
         if (s == null)
-            s = "2014-45-0001";
+            s = "2014-45-0001"; //just for debugging. remember to delete..
             //return;
         literalCaseId.Text = s;
         literalCaseId.DataBind();

@@ -165,9 +165,5 @@
             </p>
         </section>
 
-
-    </div>
-    <!-- End Content -->
-
 </asp:Content>
 
