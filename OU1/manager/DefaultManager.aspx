@@ -16,22 +16,25 @@
             </tr>
             <tr>
                 <td>
-                    <select name="status">
+                    <asp:DropDownList ID="dropDownStatus" runat="server"></asp:DropDownList>
+<%--                    <select name="status">
                         <option selected="selected">Välj alla</option>
                         <option value="stat0">Inrapporterad</option>
                         <option value="stat1">Ingen åtgärd</option>
                         <option value="stat2">Påbörjad</option>
                         <option value="stat3">Klar</option>
-                    </select>
+                    </select>--%>
                 </td>
                 <td>
-                    <select name="investigator">
+                    <asp:DropDownList ID="dropDownInvestigator" runat="server"></asp:DropDownList>
+                    
+<%--                    <select name="investigator">
                         <option selected="selected">Välj alla</option>
                         <option value="inv0">Martin Kvist</option>
                         <option value="inv1">Lena Larsson</option>
                         <option value="inv2">Oskar Ivarsson</option>
                         <option value="inv3">Susanne Fred</option>
-                    </select>
+                    </select>--%>
                 </td>
                 <td>
                     <input class="button" type="submit" value="Hämta lista" /></td>
@@ -42,7 +45,18 @@
             </tr>
         </table>
 
+      <asp:GridView ID="gridViewCrimes" runat="server" AutoGenerateColumns="false" GridLines="None">
+        <Columns>
+            <asp:BoundField  DataField="DateOfObservation" HeaderText="Ärende anmält"/>
+            <asp:HyperLinkField DataNavigateUrlFields="ID" HeaderText="Ärendenummer" DataNavigateUrlFormatString="CrimeManager.aspx?ID={0}" DataTextField="ID" />
+            <asp:BoundField DataField="TypeOfCrime" HeaderText="Miljöbrott" />
+            <asp:BoundField DataField="Status" HeaderText="Status" />
+            <asp:BoundField DataField="Department" HeaderText="Avdelning" />
+            <asp:BoundField DataField="Employee" HeaderText="Handläggare" />
+        </Columns>
+    </asp:GridView>
         <!--Nedan ser man en lista på ärenden-->
+        <!--
         <table>
             <tr>
                 <th>Ärende anmält</th>
@@ -110,7 +124,7 @@
             </tr>
         </table>
 
-
+        -->
     </div>
     <!-- End Content -->
 
