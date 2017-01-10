@@ -28,5 +28,10 @@ public partial class manager_CrimeManager : System.Web.UI.Page
 
         formViewSpecificCrime.DataSource = caseList;
         formViewSpecificCrime.DataBind();
+
+        dropDownEmployees.DataSource = backEnd.GetEmployeeList();
+        dropDownEmployees.DataBind();
+        dropDownEmployees.Items.Insert(0, new ListItem("Välj alla", "0"));
+
     }
 }

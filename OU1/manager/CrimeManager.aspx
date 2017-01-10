@@ -149,14 +149,19 @@
             <h3>Redigera ärende</h3>
             <p>
                 Ange handläggare: 
-						<select name="investigator">
+              <td>
+                    <asp:DropDownList ID="dropDownEmployees" runat="server"></asp:DropDownList>
+            </td>
+
+
+				<%--		<select name="investigator">
                             <option selected="selected">Välj</option>
                             <option value="inv1">Ada Bengtsson</option>
                             <option value="inv2">Bengt Cederström</option>
                             <option value="inv3">Cecilia Danielsson</option>
                             <option value="inv4">David Ekström</option>
                             <option value="inv5">Erik Falkenberg</option>
-                        </select>
+                        </select>--%>
             </p>
             <p>
                 <input type="checkbox" name="noAction" value="noAction" />

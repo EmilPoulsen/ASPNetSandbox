@@ -28,6 +28,10 @@ public partial class coordinator_CrimeCoordinator : System.Web.UI.Page
 
         formViewSpecificCrime.DataSource = caseList;
         formViewSpecificCrime.DataBind();
+
+        dropDownDepartment.DataSource = backEnd.GetDepartmentList();
+        dropDownDepartment.DataBind();
+        dropDownDepartment.Items.Insert(0, new ListItem("Välj alla", "0"));
         
     }
 }

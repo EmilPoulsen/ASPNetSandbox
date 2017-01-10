@@ -150,7 +150,11 @@
             <h3>Redigera ärende</h3>
             <p>
                 Ange enhet: 
-						<select name="department">
+              <td>
+                    <asp:DropDownList ID="dropDownDepartment" runat="server"></asp:DropDownList>
+            </td>
+
+				<%--		<select name="department">
                             <option selected="selected">Välj</option>
                             <option value="unit0">Småstads Kommun</option>
                             <option value="unit1">Tekniska Avloppshantering</option>
@@ -158,7 +162,7 @@
                             <option value="unit3">Miljö och Hälsoskydd</option>
                             <option value="unit4">Natur och Skogsvård</option>
                             <option value="unit5">Renhållning och Avfall</option>
-                        </select>
+                        </select>--%>
             </p>
             <p>
                 <input class="button" type="submit" value="Spara" />
