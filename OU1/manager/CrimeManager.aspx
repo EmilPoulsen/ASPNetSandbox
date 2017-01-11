@@ -2,12 +2,12 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ManagerMain" runat="Server">
     <div id="content">
-         <h2>Detaljer för ärende:
+        <h2>Detaljer för ärende:
             <asp:Literal ID="literalCaseId" runat="server"></asp:Literal>
         </h2>
         <p class="info">Du är inloggad som avdelningschef</p>
-        
-                <asp:FormView ID="formViewSpecificCrime" runat="server">
+
+        <asp:FormView ID="formViewSpecificCrime" runat="server">
             <ItemTemplate>
                 <section id="leftColumn">
                     <h3>Anmälan</h3>
@@ -74,7 +74,7 @@
 
         </asp:FormView>
 
-<%--        <section id="leftColumn">
+        <%--        <section id="leftColumn">
             <h3>Anmälan</h3>
             <p>
                 <span class="label">Typ av brott: </span>
@@ -150,11 +150,11 @@
             <p>
                 Ange handläggare: 
               <td>
-                    <asp:DropDownList ID="dropDownEmployees" runat="server"></asp:DropDownList>
-            </td>
+                  <asp:DropDownList ID="dropDownEmployees" runat="server"></asp:DropDownList>
+              </td>
 
 
-				<%--		<select name="investigator">
+                <%--		<select name="investigator">
                             <option selected="selected">Välj</option>
                             <option value="inv1">Ada Bengtsson</option>
                             <option value="inv2">Bengt Cederström</option>
@@ -166,9 +166,11 @@
             <p>
                 <input type="checkbox" name="noAction" value="noAction" />
                 Ingen åtgärd:
-                <input type="text" name="reason" value="Ange motivering" /></p>
+                <input type="text" name="reason" value="Ange motivering" />
+            </p>
             <p>
-                <input class="button" type="submit" value="Spara" /></p>
+                <input class="button" type="submit" value="Spara" />
+            </p>
         </section>
     </div>
     <!-- End Content -->
