@@ -1,0 +1,8 @@
+Plywood has many times before been used for temporary structures in architecture, mainly because of the relatively low cost and availability. Plywood is often seen as a perfectly flat sheet material, free from otherwise common properties of timber such as imperfections and grain direction. However, plywood is actually a diverse material with inherent dynamic
+associated with the tree is once came from. This is something that is rarely seen in contemporary plywood design but could be emphasized and more accessible through computational design and digital fabrication. 
+
+The research project “Digital Wood” investigates and utilizes the inherent bending properties and dynamics of plywood through the use of computational design and digital fabrication.  Through a design-by-research approach, full-scale experiments and digital tools the projects seek to explore new perspectives of programing timber in the field of architecture and design. 
+
+In collaboration with industrial partners, a temporary structure was designed and built for the Wood and Technology exhibition in Gothenburg, Sweden to function as a gathering place and visual label for visitors, while exploring new unexpected ways of materializing wood.
+
+3d-modelling in Rhinoceros and grasshopper played a major role in the design exploration and production of the pavilion, where scripts were produced to investigate different cutting patterns to weaken the plywood and produce automated cutting files. With the use of modern technology and new treatment methods, “Digital Wood” pushes the boundaries are for how this conventional material can be used to unleash new creative potentials.
