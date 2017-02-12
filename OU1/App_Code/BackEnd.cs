@@ -17,8 +17,59 @@ public class BackEnd
     /// <summary> Constructor where initiating of the differens lists are done</summary>
     public BackEnd()
     {
-        _CaseList = new List<Case>();
+        _CaseList = CreateHardCodedCaseList();//new List<Case>();
+        this.SortCaseList();
+        _CaseList.Reverse();
 
+        //Skapar en lista med anställda, obs! endast fiktiv lista, tills databasen kopplas in
+        _EmployeeList = CreateHardCodedEmployeeList();
+
+        //Skapar en lista med enheter, obs! endast fiktiv lista, tills databasen kopplas in
+        _DepartmentList = CreateHardCodedDepartmentList();
+
+        //Skapar en lista med status, obs! endast fiktiv lista, tills databasen kopplas in
+        _StatusList = CreateHardCodedStatusList(); 
+
+        ConnectToDb();
+    }
+
+    private static List<string> CreateHardCodedStatusList()
+    {
+        var statusList = new List<String>();
+        statusList.Add("Rapporterad");
+        statusList.Add("Ingen åtgärd");
+        statusList.Add("Startad");
+        statusList.Add("Färdig");
+        return statusList;
+    }
+
+    private static List<string> CreateHardCodedDepartmentList()
+    {
+        var departmentList = new List<String>();
+        departmentList.Add("Småstads Kommun");
+        departmentList.Add("IT-avdelningen");
+        departmentList.Add("Lek och Skoj");
+        departmentList.Add("Miljöskydd");
+        return departmentList;
+    }
+
+    private static List<string> CreateHardCodedEmployeeList()
+    {
+        var employeeList = new List<String>();
+        employeeList.Add("Martin Kvist");
+        employeeList.Add("Lena Larsson");
+        employeeList.Add("Oskar Ivarsson");
+        employeeList.Add("Susanne Fred");
+        return employeeList;
+    }
+
+    /// <summary>
+    /// Creates a list of fictive cases.
+    /// </summary>
+    /// <returns></returns>
+    private List<Case> CreateHardCodedCaseList()
+    {
+        var caseList = new List<Case>();
         Case case1 = new Case();
         case1.ID = "2014-45-0001";
         case1.Place = "Skogslunden vid Jensens gård";
@@ -33,7 +84,7 @@ public class BackEnd
         case1.Department = "Renhållning och Avfall";
         case1.Employee = "Susanne Fred";
 
-        _CaseList.Add(case1);
+        caseList.Add(case1);
 
         Case case2 = new Case();
         case2.ID = "2014-45-0002";
@@ -48,7 +99,7 @@ public class BackEnd
         case2.Department = "Natur och Skogsvård";
         case2.Employee = "Oskar Ivarsson";
 
-        _CaseList.Add(case2);
+        caseList.Add(case2);
 
         Case case3 = new Case();
         case3.ID = "2014-45-0003";
@@ -63,7 +114,7 @@ public class BackEnd
         case3.Department = "Miljö och Hälsoskydd";
         case3.Employee = "Lena Larsson";
 
-        _CaseList.Add(case3);
+        caseList.Add(case3);
 
         Case case4 = new Case();
         case4.ID = "2014-45-0004";
@@ -79,7 +130,7 @@ public class BackEnd
         case4.Department = "Miljö och Hälsoskydd";
         case4.Employee = "Martin Kvist";
 
-        _CaseList.Add(case4);
+        caseList.Add(case4);
 
         Case case5 = new Case();
         case5.ID = "2014-45-0005";
@@ -95,30 +146,14 @@ public class BackEnd
         case5.Department = "Ej tillsatt";
         case5.Employee = "Ej tillsatt";
 
-        _CaseList.Add(case5);
-        this.SortCaseList();
-        _CaseList.Reverse();
-        //Skapar en lista med anställda, obs! endast fiktiv lista, tills databasen kopplas in
-        _EmployeeList = new List<String>();
-        _EmployeeList.Add("Martin Kvist");
-        _EmployeeList.Add("Lena Larsson");
-        _EmployeeList.Add("Oskar Ivarsson");
-        _EmployeeList.Add("Susanne Fred");
+        caseList.Add(case5);
+        return caseList;
 
-        //Skapar en lista med enheter, obs! endast fiktiv lista, tills databasen kopplas in
-        _DepartmentList = new List<String>();
-        _DepartmentList.Add("Småstads Kommun");
-        _DepartmentList.Add("IT-avdelningen");
-        _DepartmentList.Add("Lek och Skoj");
-        _DepartmentList.Add("Miljöskydd");
+    }
 
-        //Skapar en lista med status, obs! endast fiktiv lista, tills databasen kopplas in
-        _StatusList = new List<String>();
-        _StatusList.Add("Rapporterad");
-        _StatusList.Add("Ingen åtgärd");
-        _StatusList.Add("Startad");
-        _StatusList.Add("Färdig");
-
+    private void ConnectToDb()
+    {
+        DbHandler handler = new DbHandler();
     }
 
     private void SortCaseList(){
@@ -133,6 +168,8 @@ public class BackEnd
         //TODO
         //throw new NotImplementedException();
     }
+
+
 
     /// <summary>Method that gets one specific Case</summary>
     /// <param name="productID">The id of the Case</param>
