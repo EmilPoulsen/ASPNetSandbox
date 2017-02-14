@@ -13,11 +13,15 @@ public class BackEnd
     private List<String> _EmployeeList = null;
     private List<String> _DepartmentList = null;
     private List<String> _StatusList = null;
+    private DbHandler _dbHandler;
 
     /// <summary> Constructor where initiating of the differens lists are done</summary>
     public BackEnd()
     {
-        _CaseList = CreateHardCodedCaseList();//new List<Case>();
+        _dbHandler = new DbHandler();
+
+        //_CaseList = CreateHardCodedCaseList();//new List<Case>();
+        _CaseList = CreateDatabseCaseList();
         this.SortCaseList();
         _CaseList.Reverse();
 
@@ -30,7 +34,7 @@ public class BackEnd
         //Skapar en lista med status, obs! endast fiktiv lista, tills databasen kopplas in
         _StatusList = CreateHardCodedStatusList(); 
 
-        ConnectToDb();
+        //ConnectToDb();
     }
 
     private static List<string> CreateHardCodedStatusList()
@@ -62,6 +66,12 @@ public class BackEnd
         employeeList.Add("Susanne Fred");
         return employeeList;
     }
+
+    private List<Case> CreateDatabseCaseList()
+    {
+        return _dbHandler.GetCrimeData();
+    }
+
 
     /// <summary>
     /// Creates a list of fictive cases.

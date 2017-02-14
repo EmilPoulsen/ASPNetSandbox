@@ -20,9 +20,43 @@ public class Case
     private String _Status;
     private String _Department;
     private String _Employee;
+    private String _StatusId;
+    private String _EmployeeId;
+    private String _DepartmentId;
+
+    private double _Latitud;
+    private double _Longitud;
+
+    public double Longitud
+    {
+        get { return _Longitud; }
+        set { _Longitud = value; }
+    }
+    
+
+
+    public double Latitude
+    {
+        get { return _Latitud; }
+        set { _Latitud = value; }
+    }
+    
 
     public Case()
     {
+    }
+
+
+    public String DepartmentId
+    {
+        get { return _DepartmentId; }
+        set { _DepartmentId = value; }
+    }
+
+    public String EmployeeId
+    {
+        get { return _EmployeeId; }
+        set { _EmployeeId = value; }
     }
 
     /// <summary>
@@ -33,6 +67,13 @@ public class Case
         set { _ID = value; }
         get { return _ID; }
     }
+
+    public String StatudId
+    {
+        set { _StatusId = value; }
+        get { return _StatusId; }
+    }
+    
 
     public String Place
     {
