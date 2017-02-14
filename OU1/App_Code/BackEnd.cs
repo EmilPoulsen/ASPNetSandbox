@@ -73,6 +73,8 @@ public class BackEnd
     }
 
 
+
+
     /// <summary>
     /// Creates a list of fictive cases.
     /// </summary>
