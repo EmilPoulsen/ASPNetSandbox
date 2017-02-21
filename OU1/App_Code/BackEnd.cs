@@ -26,15 +26,26 @@ public class BackEnd
         _CaseList.Reverse();
 
         //Skapar en lista med anställda, obs! endast fiktiv lista, tills databasen kopplas in
-        _EmployeeList = CreateHardCodedEmployeeList();
+        //_EmployeeList = CreateHardCodedEmployeeList();
+        _EmployeeList = CreateDatabaseEmployeeList();
 
         //Skapar en lista med enheter, obs! endast fiktiv lista, tills databasen kopplas in
-        _DepartmentList = CreateHardCodedDepartmentList();
+        //_DepartmentList = CreateHardCodedDepartmentList();
+        _DepartmentList = CreateDatabaseDepartmentList();
 
         //Skapar en lista med status, obs! endast fiktiv lista, tills databasen kopplas in
-        _StatusList = CreateHardCodedStatusList(); 
-
+        //_StatusList = CreateHardCodedStatusList(); 
+        _StatusList = CreateDatabaseStatusList();
         //ConnectToDb();
+    }
+
+    private List<string> CreateDatabaseStatusList()
+    {
+        var statusList = new List<String>();
+        foreach (var item in _dbHandler.StatusIdMap) {
+            statusList.Add(item.Value);
+        }
+        return statusList;
     }
 
     private static List<string> CreateHardCodedStatusList()
@@ -47,6 +58,16 @@ public class BackEnd
         return statusList;
     }
 
+
+    private List<string> CreateDatabaseDepartmentList()
+    {
+        var departmentList = new List<String>();
+        foreach (var item in _dbHandler.DepartmentIdMap) {
+            departmentList.Add(item.Value);
+        }
+        return departmentList;
+    }
+
     private static List<string> CreateHardCodedDepartmentList()
     {
         var departmentList = new List<String>();
@@ -55,6 +76,15 @@ public class BackEnd
         departmentList.Add("Lek och Skoj");
         departmentList.Add("Miljöskydd");
         return departmentList;
+    }
+
+    private List<string> CreateDatabaseEmployeeList()
+    {
+        List<string> employees = new List<string>();
+        foreach (Employee empl in _dbHandler.Employees) {
+            employees.Add(empl.FName + " " + empl.LName);
+        }
+        return employees;
     }
 
     private static List<string> CreateHardCodedEmployeeList()

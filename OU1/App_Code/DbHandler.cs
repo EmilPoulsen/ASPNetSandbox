@@ -16,12 +16,37 @@ public class DbHandler
 
     public DbHandler()
     {
-        
         CreateStatusIdMap();
         CreateDepartmentIdMap();
         CreateEmployeesFromDb();
         //MainTest();
     }
+
+
+
+    public List<Employee> Employees
+    {
+        get { return _employees; }
+        set { _employees = value; }
+    }
+
+    public Dictionary<string, string> DepartmentIdMap
+    {
+        get
+        {
+            return _departmentIdMap;
+        }
+    }
+
+    public Dictionary<string, string> StatusIdMap
+    {
+        get
+        {
+            return _statusIdMap;
+        }
+    }
+
+
     private void MainTest()
     {
         MySqlConnection conn = ConnectToDbUsingConfigData();//SqlConnect(server, database, uid, password);
@@ -119,6 +144,9 @@ public class DbHandler
         }
     }
 
+
+
+
     private void CreateDepartmentIdMap()
     {
         _departmentIdMap = new Dictionary<string, string>();
@@ -136,6 +164,8 @@ public class DbHandler
         conn.Close();
     }
 
+    
+
     private void CreateStatusIdMap()
     {
         _statusIdMap = new Dictionary<string, string>();
@@ -151,6 +181,7 @@ public class DbHandler
         myReader.Close();
         conn.Close();
     }
+
 
     private void CreateEmployeesFromDb()
     {
